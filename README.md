@@ -29,3 +29,6 @@ This folder (`project_template`):
     - `requirements.txt`: the pinned project dependencies installed when you call `python3 -m pip install -r requirements.txt`.
 - The `project` folder contains the package source code and the folder's name becomes the package name (imported via `import project`).
     - `__init__.py`: module is executed when you call `import project`. Here, it contains the code to load the `config.ini` file 
+    - `__main__.py`: module creates the `config.ini` with the hard-coded paths. You can call it using `python3 -m project config`. **Techincal note: `__main__.py` is executed after `__init__.py`, so `__init__.py` includes an `if` statement to prevent a crash.**
+    - `library.py`: A dummy project module that can be imported via `import project.library` or `from project import library`. The convention is that package source code contains functions and classes and no scripts. This is to avoid executing scripting code (code outside of any function or class) on import.
+    - `a_script.py`: A dummy script that shows how to import `project` and call the `hello` function in `project/library.py`. Once `project` is installed, you can run `a_scipt.py` anywhere on your computer. 
