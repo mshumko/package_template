@@ -2,6 +2,10 @@ import warnings
 import pathlib
 import configparser
 
+# Can add relative imports for your modules here. For example:
+from project.library import hello
+# will be avaliable to users as project.hello()
+
 __version__ = '0.0.1'
 
 # Load the configuration settings.

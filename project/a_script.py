@@ -1,4 +1,4 @@
-# A script showing how this package is imported.
+# A script showing how this package is imported into a script.
 
 import project
 
